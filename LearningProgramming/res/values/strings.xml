@@ -1,0 +1,14 @@
+<resources>
+
+    <string name="app_name">LearningProgramming</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="button_start">スタート</string>
+    <string name="button_option">オプション</string>
+    <string name="text_gamemenu">Game Menu</string>
+    <string name="button_stageselect">ステージセレクト</string>
+    <string name="button_tutorial">チュートリアル</string>
+    <string name="button_back">戻る</string>
+
+</resources>
