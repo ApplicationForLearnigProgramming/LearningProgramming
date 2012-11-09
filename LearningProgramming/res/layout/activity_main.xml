@@ -28,4 +28,14 @@
         android:onClick="moveOption"
         android:text="@string/button_option" />
 
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="14dp"
+        android:layout_marginLeft="14dp"
+        android:text="ステージデータ作成" />
+
 </RelativeLayout>

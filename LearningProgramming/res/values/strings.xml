@@ -11,5 +11,6 @@
     <string name="button_tutorial">チュートリアル</string>
     <string name="button_back">戻る</string>
     <string name="button_reset">リセット</string>
+    <string name="title_activity_stage_activity_writer">StageActivityWriter</string>
 
 </resources>

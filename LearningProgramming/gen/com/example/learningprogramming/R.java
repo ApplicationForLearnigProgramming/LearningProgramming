@@ -31,13 +31,13 @@ public final class R {
         public static final int button3=0x7f070006;
         public static final int firstlayout=0x7f07000a;
         public static final int flipper=0x7f070009;
-        public static final int imgbtn_id=0x7f07000c;
         public static final int list=0x7f070013;
         public static final int menu_settings=0x7f070014;
         public static final int myview1=0x7f070008;
         public static final int myview2=0x7f070003;
         public static final int myview3=0x7f070004;
         public static final int secondlayout=0x7f07000b;
+        public static final int stage001=0x7f07000c;
         public static final int startview=0x7f070007;
         public static final int textView1=0x7f070005;
     }
@@ -57,6 +57,7 @@ public final class R {
     }
     public static final class menu {
         public static final int activity_main=0x7f060000;
+        public static final int activity_stage_activity_writer=0x7f060001;
     }
     public static final class string {
         public static final int app_name=0x7f040000;
@@ -70,6 +71,7 @@ public final class R {
         public static final int menu_settings=0x7f040002;
         public static final int text_gamemenu=0x7f040006;
         public static final int title_activity_main=0x7f040003;
+        public static final int title_activity_stage_activity_writer=0x7f04000b;
     }
     public static final class style {
         public static final int AppTheme=0x7f050000;

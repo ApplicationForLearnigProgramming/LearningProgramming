@@ -22,27 +22,36 @@
         </activity>
         <activity
             android:name=".GameMenuActivity"
-            android:label="Game Menu">
+            android:label="Game Menu" >
         </activity>
         <activity
             android:name=".OptionActivity"
-            android:label="Option">
+            android:label="Option" >
         </activity>
         <activity
             android:name=".StageSelectActivity"
-            android:label="Stage Select">
+            android:label="Stage Select" >
         </activity>
         <activity
             android:name=".StageActivity"
-            android:label="Stage">
+            android:label="Stage" >
         </activity>
         <activity
             android:name=".GambitActivity"
-            android:label="Gambit">
+            android:label="Gambit" >
         </activity>
         <activity
             android:name=".TutorialActivity"
-            android:label="Tutorial">
+            android:label="Tutorial" >
+        </activity>
+        <activity
+            android:name=".StageActivityWriter"
+            android:label="@string/title_activity_stage_activity_writer" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 
