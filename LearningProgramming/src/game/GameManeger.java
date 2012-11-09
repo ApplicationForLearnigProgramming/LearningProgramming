@@ -9,7 +9,7 @@ public class GameManeger {
     private int _turn = 0;
 
     public GameManeger(){
-        _map = new Map("data/stage001.map");
+        _map = new Map();
         _gambits = new ArrayList<Gambit>();
     }
 
@@ -25,6 +25,7 @@ public class GameManeger {
 
     public void reset(){
         _gambits.clear();
+        _map = new Map();
         _turn = 0;
     }
 
@@ -35,6 +36,9 @@ public class GameManeger {
                 if(_gambits.get(i).isOK(_map)){
                     _map.getCharacter().move(_gambits.get(i).getMotion(_map.getCharacter().getDirection()));
                     while(_gambits.get(i).checkForwardSide(_map)){
+                    	if(_map.getTile(_map.getCharacter().getLocation()).getTileType() == TileType.GOAL){
+                    		return true;
+                    	}
                         _map.getCharacter().move(_map.getCharacter().getDirection());
                     }
                     break;

@@ -10,5 +10,6 @@
     <string name="button_stageselect">ステージセレクト</string>
     <string name="button_tutorial">チュートリアル</string>
     <string name="button_back">戻る</string>
+    <string name="button_reset">リセット</string>
 
 </resources>
