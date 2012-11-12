@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout android:layout_width="match_parent"
-    android:layout_height="match_parent" xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageButton
+    android:layout_height="match_parent" xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/main">
+
+    <ImageButton
         android:id="@+id/stage001"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="41dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="144dp"
         android:onClick="doAction"
         android:src="@drawable/stage001" />
 

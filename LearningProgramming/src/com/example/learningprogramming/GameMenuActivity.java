@@ -4,6 +4,8 @@ import android.app.*;
 import android.content.*;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 
 public class GameMenuActivity extends Activity {
 	final Activity activity = this;
@@ -11,6 +13,8 @@ public class GameMenuActivity extends Activity {
 	@Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_gamemenu);
     }
 

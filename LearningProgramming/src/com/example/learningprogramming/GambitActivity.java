@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.GestureDetector.SimpleOnGestureListener;
+import android.view.Window;
+import android.view.WindowManager;
 
 public class GambitActivity extends Activity{
 
@@ -15,6 +17,8 @@ public class GambitActivity extends Activity{
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_second);
         myGestureDetector = new GestureDetector(new MyGestureListener());
     }
