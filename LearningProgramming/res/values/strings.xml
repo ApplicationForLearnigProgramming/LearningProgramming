@@ -12,5 +12,9 @@
     <string name="button_back">戻る</string>
     <string name="button_reset">リセット</string>
     <string name="title_activity_stage_activity_writer">StageActivityWriter</string>
+    <string-array name="GunbitCondition">
+        <item >Condition1</item>
+        <item >Condition2</item>
+    </string-array>
 
 </resources>
