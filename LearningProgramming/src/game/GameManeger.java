@@ -7,6 +7,9 @@ public class GameManeger {
 	private Map _map;
 	private ArrayList<Gambit> _gambits;
 	private int _turn = 0;
+    private boolean _straightFlag = false;
+    private boolean _warpFlag = true;
+    private final Gambit STRAIGHTGAMBIT = new Gambit(false, GambitCondition.CanForward, GambitMotion.Forward);
 
 	public GameManeger() {
 		_gambits = new ArrayList<Gambit>();
@@ -18,7 +21,7 @@ public class GameManeger {
 
 	/**
 	 * ガンビットを追加します.
-	 * 
+	 *
 	 * @param straight
 	 *            直進ONOFF.
 	 * @param condition
@@ -37,37 +40,68 @@ public class GameManeger {
 		_turn = 0;
 	}
 
-	public boolean advanceTurn() {
-		_turn++;
-		for (int i = 0; i < _gambits.size(); i++) {
-			if (_gambits.get(i).goStraight()) {
-				if (_gambits.get(i).isOK(_map)) {
-					_map.getCharacter().move(
-							_gambits.get(i).getMotion(
-									_map.getCharacter().getDirection()));
-					while (_gambits.get(i).checkForwardSide(_map)) {
-						if (_map.getTile(_map.getCharacter().getLocation())
-								.getTileType() == TileType.GOAL) {
-							return true;
-						}
-						_map.getCharacter().move(
-								_map.getCharacter().getDirection());
-					}
-					break;
-				}
-			} else {
-				if (_gambits.get(i).isOK(_map)) {
-					_map.getCharacter().move(
-							_gambits.get(i).getMotion(
-									_map.getCharacter().getDirection()));
-					break;
-				}
+	public boolean advanceTurn(){
+			_turn++;
+	    if(_map.getTile(_map.getCharacter().getLocation()).getTileType() == TileType.WARP_A){
+			_map.getCharacter().warp(_map.warp(TileType.WARP_A));
+			if(_warpFlag){
+				_warpFlag = false;
+				return false;
+			}else{
+				_warpFlag = true;
+			}
+		}else if(_map.getTile(_map.getCharacter().getLocation()).getTileType() == TileType.WARP_B){
+			_map.getCharacter().warp(_map.warp(TileType.WARP_B));
+			if(_warpFlag){
+				_warpFlag = false;
+				return false;
+			}else{
+				_warpFlag = true;
 			}
 		}
-		if (_map.getTile(_map.getCharacter().getLocation()).getTileType() == TileType.GOAL) {
-			return true;
-		}
-		return false;
+
+	    if(_straightFlag){
+	        if(STRAIGHTGAMBIT.checkForwardSide(_map)){
+	        	_map.getCharacter().move(STRAIGHTGAMBIT.getMotion(_map.getCharacter().getDirection()));
+	        }else{
+		        for (int i = 0; i < _gambits.size(); i++) {
+		            if(_gambits.get(i).goStraight()){
+		                if(_gambits.get(i).isOK(_map)){
+		                	_map.getCharacter().move(_gambits.get(i).getMotion(_map.getCharacter().getDirection()));
+		                	_straightFlag = true;
+		                	break;
+		                }
+		            }else{
+		                if(_gambits.get(i).isOK(_map)){
+		                    _map.getCharacter().move(_gambits.get(i).getMotion(_map.getCharacter().getDirection()));
+		                    break;
+		                }
+		            }
+		        }
+	        	_straightFlag = false;
+	        }
+	    }else{
+	        for (int i = 0; i < _gambits.size(); i++) {
+	            if(_gambits.get(i).goStraight()){
+	                if(_gambits.get(i).isOK(_map)){
+	                	_map.getCharacter().move(_gambits.get(i).getMotion(_map.getCharacter().getDirection()));
+	                	_straightFlag = true;
+	                	break;
+	                }
+	            }else{
+	                if(_gambits.get(i).isOK(_map)){
+	                    _map.getCharacter().move(_gambits.get(i).getMotion(_map.getCharacter().getDirection()));
+	                    break;
+	                }
+	            }
+	        }
+	    }
+
+	    if(_map.getTile(_map.getCharacter().getLocation()).getTileType() == TileType.GOAL){
+	        return true;
+	    }
+
+	    return false;
 	}
 
 	public Map getMap() {
@@ -76,6 +110,10 @@ public class GameManeger {
 
 	public int getTurn() {
 		return _turn;
+	}
+
+	public boolean isWarp(){
+		return _warpFlag;
 	}
 
 }

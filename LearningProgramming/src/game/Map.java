@@ -12,11 +12,17 @@ public class Map {
 	private final int NORMAL = 0;
 	private final int WALL = 1;
 	private final int GOAL = 2;
+	private final int WARP_A = 3;
+	private final int WARP_B = 4;
+
 	private Point2 _startCharaPoint = null;
 	private Direction4 _startCharaDirection = null;
 
 	private ArrayList<Tile> _tiles = new ArrayList<Tile>();
 	private Character _chara;
+	private Tile warp_A;
+	private Tile warp_B;
+	private boolean _warpFlag = true;
 	private int _width = 0;
 	private int _height = 0;
 	private String _filename = null;
@@ -92,6 +98,15 @@ public class Map {
 							case GOAL :
 								tiletype = TileType.GOAL;
 								break;
+							case WARP_A:
+				            	tiletype = TileType.WARP_A;
+				            	warp_A = new Tile(h, w, TileType.WARP_A);
+				            	break;
+				            case WARP_B:
+				            	tiletype = TileType.WARP_B;
+				            	warp_B = new Tile(h, w, TileType.WARP_B);
+				            	break;
+
 							default :
 								tiletype = TileType.NORMAL;
 						}
@@ -128,6 +143,25 @@ public class Map {
 		}
 		return null;
 	}
+	public Point2 warp(TileType type){
+		if(_warpFlag){
+			if(type == TileType.WARP_A){
+				_warpFlag =false;
+				return warp_B.getLocation();
+			}else{
+				_warpFlag =false;
+				return warp_A.getLocation();
+			}
+		}else{
+			_warpFlag = true;
+			if(type == TileType.WARP_A){
+				return warp_A.getLocation();
+			}else{
+				return warp_B.getLocation();
+			}
+		}
+	}
+
 
 	public Character getCharacter() {
 		return _chara;

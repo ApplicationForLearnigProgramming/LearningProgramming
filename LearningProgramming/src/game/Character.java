@@ -17,6 +17,10 @@ public class Character {
 		return _point;
 	}
 
+	public void warp(Point2 point){
+		_point = point;
+	}
+
 	public void move(Direction4 direction){
 		_point = _point.move(direction);
 		_direction = direction;

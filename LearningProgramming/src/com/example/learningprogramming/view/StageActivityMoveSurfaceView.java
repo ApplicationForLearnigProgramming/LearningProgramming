@@ -41,7 +41,7 @@ public class StageActivityMoveSurfaceView extends SurfaceView
 	private GameManeger _maneger;
 	private SurfaceHolder holder = null;
 	private Bitmap bitmap = null;
-
+	private boolean _warpFlag = false;
 	private int _lastX;
 	private int _lastY;
 	private int _nextX;
@@ -174,29 +174,32 @@ public class StageActivityMoveSurfaceView extends SurfaceView
 								* LENGTH + TOP;
 						_nextY = _maneger.getMap().getCharacter().getLocation().y
 								* LENGTH + LEFT;
-						while (_lastY != _nextY && _flag) {
-							try {
+						if(_maneger.isWarp()){
+							while (_lastY != _nextY && _flag) {
+									_lastY -= 4 * ((_lastY - _nextY) / Math
+											.abs(_lastY - _nextY));
+									drawSurface();
+							}
+							while (_lastX != _nextX && _flag) {
+									_lastX -= 4 * ((_lastX - _nextX) / Math
+											.abs(_lastX - _nextX));
+									drawSurface();
+							}
+						}else{
+							/*
+							while (_lastY != _nextY && _flag) {
 								_lastY -= 4 * ((_lastY - _nextY) / Math
 										.abs(_lastY - _nextY));
-								Thread.sleep(_speed);
 								drawSurface();
-							} catch (InterruptedException e) {
-								// TODO 自動生成された catch ブロック
-								e.printStackTrace();
 							}
-
-						}
-						while (_lastX != _nextX && _flag) {
-							try {
+							while (_lastX != _nextX && _flag) {
 								_lastX -= 4 * ((_lastX - _nextX) / Math
 										.abs(_lastX - _nextX));
-								Thread.sleep(_speed);
 								drawSurface();
-							} catch (InterruptedException e) {
-								// TODO 自動生成された catch ブロック
-								e.printStackTrace();
 							}
-
+							*/
+							_lastX = _nextX;
+							_lastY = _nextY;
 						}
 					}
 				}
