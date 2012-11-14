@@ -39,7 +39,7 @@ public class StageActivity extends Activity {
 
 		Map map = null;
 		try {
-			map = new Map(loadStageFile("Stage001.map"));
+			map = new Map(loadStageFile("Stage002.map"));
 
 			// SurfaceViewを参照
 			surfaceview = (SurfaceView) findViewById(R.id.SurfaceViewMain);

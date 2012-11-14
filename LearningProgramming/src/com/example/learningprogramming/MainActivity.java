@@ -54,6 +54,7 @@ public class MainActivity extends Activity {
 	private void stageCreate(View v) {
 		StageCreator creator = new StageCreator();
 		createStageFile(creator.createStage001());
+		createStageFile(creator.createStage002());
 	}
 
 	private void createStageFile(Map stage) {

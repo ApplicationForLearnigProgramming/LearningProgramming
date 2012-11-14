@@ -1,5 +1,6 @@
 package com.example.learningprogramming.view;
 
+import game.Direction4;
 import game.GambitCondition;
 import game.GambitMotion;
 import game.GameManeger;
@@ -41,7 +42,10 @@ public class StageActivityMoveSurfaceView extends SurfaceView
 	private GameManeger _maneger;
 	private SurfaceHolder holder = null;
 	private Bitmap bitmap = null;
-	private boolean _warpFlag = false;
+	private Bitmap _charaUP = null;
+	private Bitmap _charaRIGHT = null;
+	private Bitmap _charaDOWN = null;
+	private Bitmap _charaLEFT = null;
 	private int _lastX;
 	private int _lastY;
 	private int _nextX;
@@ -97,6 +101,10 @@ public class StageActivityMoveSurfaceView extends SurfaceView
 		holder.addCallback(this);
 		Resources res = context.getResources();
 		bitmap = BitmapFactory.decodeResource(res, R.drawable.chara);
+		_charaDOWN = BitmapFactory.decodeResource(res, R.drawable.chara_down);
+		_charaUP = BitmapFactory.decodeResource(res, R.drawable.chara_up);
+		_charaLEFT = BitmapFactory.decodeResource(res, R.drawable.chara_left);
+		_charaRIGHT = BitmapFactory.decodeResource(res, R.drawable.chara_right);
 		int width = bitmap.getWidth();
 		int height = bitmap.getHeight();
 		int newWidth = 40;
@@ -110,12 +118,11 @@ public class StageActivityMoveSurfaceView extends SurfaceView
 
 		_maneger = new GameManeger();
 		_maneger.setMap(map);
-		_maneger.addGambit(true, GambitCondition.CanRightAndLeft,
-				GambitMotion.Right);
-		_maneger.addGambit(false, GambitCondition.CanRight, GambitMotion.Right);
+		_maneger.addGambit(false, GambitCondition.CanRightAndLeft, GambitMotion.Left);
 		_maneger.addGambit(true, GambitCondition.CanLeft, GambitMotion.Left);
-		_maneger.addGambit(false, GambitCondition.CanForward,
-				GambitMotion.Forward);
+		_maneger.addGambit(false, GambitCondition.CanForward,GambitMotion.Forward);
+		_maneger.addGambit(false, GambitCondition.CanBack,GambitMotion.Back);
+
 
 		_lastX = _maneger.getMap().getCharacter().getLocation().x * LENGTH
 				+ TOP;
@@ -153,8 +160,22 @@ public class StageActivityMoveSurfaceView extends SurfaceView
 			}
 		}
 
-		if (bitmap != null) {
-			canvas.drawBitmap(bitmap, _lastY, _lastX, paint);
+		if(_maneger.getMap().getCharacter().getDirection() == Direction4.DOWN){
+			if (_charaDOWN != null) {
+				canvas.drawBitmap(_charaDOWN, _lastY, _lastX, paint);
+			}
+		}else if(_maneger.getMap().getCharacter().getDirection() == Direction4.UP){
+			if (_charaUP != null) {
+				canvas.drawBitmap(_charaUP, _lastY, _lastX, paint);
+			}
+		}else if(_maneger.getMap().getCharacter().getDirection() == Direction4.LEFT){
+			if (_charaLEFT != null) {
+				canvas.drawBitmap(_charaLEFT, _lastY, _lastX, paint);
+			}
+		}else if(_maneger.getMap().getCharacter().getDirection() == Direction4.RIGHT){
+			if (_charaRIGHT != null) {
+				canvas.drawBitmap(_charaRIGHT, _lastY, _lastX, paint);
+			}
 		}
 
 		holder.unlockCanvasAndPost(canvas);
@@ -186,20 +207,15 @@ public class StageActivityMoveSurfaceView extends SurfaceView
 									drawSurface();
 							}
 						}else{
-							/*
-							while (_lastY != _nextY && _flag) {
-								_lastY -= 4 * ((_lastY - _nextY) / Math
-										.abs(_lastY - _nextY));
+							try{
+								Thread.sleep(500);
+								_lastX = _nextX;
+								_lastY = _nextY;
 								drawSurface();
+								Thread.sleep(500);
+							} catch (InterruptedException e) {
+								System.out.println(e);
 							}
-							while (_lastX != _nextX && _flag) {
-								_lastX -= 4 * ((_lastX - _nextX) / Math
-										.abs(_lastX - _nextX));
-								drawSurface();
-							}
-							*/
-							_lastX = _nextX;
-							_lastY = _nextY;
 						}
 					}
 				}
@@ -216,12 +232,11 @@ public class StageActivityMoveSurfaceView extends SurfaceView
 		Log.d("FLAG", "OK");
 		_flag = false;
 		_maneger.reset();
-		_maneger.addGambit(true, GambitCondition.CanRightAndLeft,
-				GambitMotion.Right);
 		_maneger.addGambit(false, GambitCondition.CanRight, GambitMotion.Right);
-		_maneger.addGambit(true, GambitCondition.CanLeft, GambitMotion.Left);
-		_maneger.addGambit(false, GambitCondition.CanForward,
-				GambitMotion.Forward);
+		_maneger.addGambit(true, GambitCondition.CanRightAndLeft, GambitMotion.Left);
+		_maneger.addGambit(false, GambitCondition.CanLeft, GambitMotion.Left);
+		_maneger.addGambit(false, GambitCondition.CanForward,GambitMotion.Forward);
+		_maneger.addGambit(false, GambitCondition.CanBack,GambitMotion.Back);
 		_lastX = _maneger.getMap().getCharacter().getLocation().x * LENGTH
 				+ TOP;
 		_lastY = _maneger.getMap().getCharacter().getLocation().y * LENGTH

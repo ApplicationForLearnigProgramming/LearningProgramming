@@ -74,11 +74,11 @@ public class GameManeger {
 		            }else{
 		                if(_gambits.get(i).isOK(_map)){
 		                    _map.getCharacter().move(_gambits.get(i).getMotion(_map.getCharacter().getDirection()));
+		    	        	_straightFlag = false;
 		                    break;
 		                }
 		            }
 		        }
-	        	_straightFlag = false;
 	        }
 	    }else{
 	        for (int i = 0; i < _gambits.size(); i++) {
