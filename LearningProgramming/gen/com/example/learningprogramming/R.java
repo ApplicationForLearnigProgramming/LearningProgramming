@@ -9,6 +9,7 @@ package com.example.learningprogramming;
 
 public final class R {
     public static final class array {
+        public static final int GunbitAction=0x7f050001;
         public static final int GunbitCondition=0x7f050000;
     }
     public static final class attr {
@@ -23,32 +24,45 @@ public final class R {
         public static final int title=0x7f020006;
     }
     public static final class id {
-        public static final int Condition5=0x7f080005;
-        public static final int FrameLayout01=0x7f080012;
-        public static final int ImageView01=0x7f080013;
-        public static final int ImageView02=0x7f080014;
-        public static final int ImageView03=0x7f080015;
-        public static final int ImageView04=0x7f080016;
-        public static final int ImageView05=0x7f080017;
+        public static final int Action1=0x7f080006;
+        public static final int Action2=0x7f080009;
+        public static final int Action3=0x7f08000c;
+        public static final int Action4=0x7f08000f;
+        public static final int Action5=0x7f080012;
+        public static final int Action6=0x7f080015;
+        public static final int Condition1=0x7f080005;
+        public static final int Condition2=0x7f080008;
+        public static final int Condition3=0x7f08000b;
+        public static final int Condition4=0x7f08000e;
+        public static final int Condition5=0x7f080011;
+        public static final int Condition6=0x7f080014;
+        public static final int FrameLayout01=0x7f08001f;
+        public static final int ImageView01=0x7f080020;
+        public static final int ImageView02=0x7f080021;
+        public static final int ImageView03=0x7f080022;
+        public static final int ImageView04=0x7f080023;
+        public static final int ImageView05=0x7f080024;
         public static final int SurfaceViewMain=0x7f080000;
         public static final int button1=0x7f080001;
         public static final int button2=0x7f080002;
-        public static final int button3=0x7f08000b;
-        public static final int firstlayout=0x7f08000f;
-        public static final int flipper=0x7f08000e;
-        public static final int list=0x7f080018;
-        public static final int menu_settings=0x7f080019;
-        public static final int myview1=0x7f08000d;
-        public static final int myview2=0x7f080009;
-        public static final int myview3=0x7f08000a;
+        public static final int button3=0x7f080018;
+        public static final int firstlayout=0x7f08001c;
+        public static final int flipper=0x7f08001b;
+        public static final int list=0x7f080025;
+        public static final int menu_settings=0x7f080026;
+        public static final int myview1=0x7f08001a;
+        public static final int myview2=0x7f080016;
+        public static final int myview3=0x7f080017;
         public static final int scrollView1=0x7f080003;
-        public static final int secondlayout=0x7f080010;
-        public static final int stage001=0x7f080011;
+        public static final int secondlayout=0x7f08001d;
+        public static final int stage001=0x7f08001e;
         public static final int tableRow1=0x7f080004;
-        public static final int tableRow2=0x7f080006;
-        public static final int tableRow3=0x7f080007;
-        public static final int tableRow4=0x7f080008;
-        public static final int textView1=0x7f08000c;
+        public static final int tableRow2=0x7f080007;
+        public static final int tableRow3=0x7f08000a;
+        public static final int tableRow4=0x7f08000d;
+        public static final int tableRow5=0x7f080010;
+        public static final int tableRow6=0x7f080013;
+        public static final int textView1=0x7f080019;
     }
     public static final class layout {
         public static final int activity_first=0x7f030000;

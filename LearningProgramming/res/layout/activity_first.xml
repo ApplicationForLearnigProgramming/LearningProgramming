@@ -49,39 +49,119 @@
                         android:id="@+id/tableRow1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" >
-                                <Spinner
-                    android:id="@+id/Condition5"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:entries="@array/GunbitCondition" />
+                    <Spinner
+                    	android:id="@+id/Condition1"
+                    	android:layout_width="fill_parent"
+                    	android:layout_height="wrap_content"
+                    	android:entries="@array/GunbitCondition" />
+                    <Spinner
+                    	android:id="@+id/Action1"
+                    	android:layout_width="fill_parent"
+                    	android:layout_height="wrap_content"
+                    	android:entries="@array/GunbitAction" />
 
                         
                     </TableRow>
+
 
                     <TableRow
                         android:id="@+id/tableRow2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" >
-                                        <Spinner
-                    android:id="@+id/Condition5"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:entries="@array/GunbitCondition" />
+                    <Spinner
+                    	android:id="@+id/Condition2"
+                    	android:layout_width="fill_parent"
+                    	android:layout_height="wrap_content"
+                    	android:entries="@array/GunbitCondition" />
+                    <Spinner
+                    	android:id="@+id/Action2"
+                    	android:layout_width="fill_parent"
+                    	android:layout_height="wrap_content"
+                    	android:entries="@array/GunbitAction" />
 
                         
-                    </TableRow>
+                    </TableRow>                    
+
 
                     <TableRow
                         android:id="@+id/tableRow3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" >
-                    </TableRow>
+                    <Spinner
+                    	android:id="@+id/Condition3"
+                    	android:layout_width="fill_parent"
+                    	android:layout_height="wrap_content"
+                    	android:entries="@array/GunbitCondition" />
+                    <Spinner
+                    	android:id="@+id/Action3"
+                    	android:layout_width="fill_parent"
+                    	android:layout_height="wrap_content"
+                    	android:entries="@array/GunbitAction" />
+
+                        
+                    </TableRow>               
+
+
 
                     <TableRow
                         android:id="@+id/tableRow4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" >
+                    <Spinner
+                    	android:id="@+id/Condition4"
+                    	android:layout_width="fill_parent"
+                    	android:layout_height="wrap_content"
+                    	android:entries="@array/GunbitCondition" />
+                    <Spinner
+                    	android:id="@+id/Action4"
+                    	android:layout_width="fill_parent"
+                    	android:layout_height="wrap_content"
+                    	android:entries="@array/GunbitAction" />
+
+                        
                     </TableRow>
+
+
+                    <TableRow
+                        android:id="@+id/tableRow5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+                    <Spinner
+                    	android:id="@+id/Condition5"
+                    	android:layout_width="fill_parent"
+                    	android:layout_height="wrap_content"
+                    	android:entries="@array/GunbitCondition" />
+                    <Spinner
+                    	android:id="@+id/Action5"
+                    	android:layout_width="fill_parent"
+                    	android:layout_height="wrap_content"
+                    	android:entries="@array/GunbitAction" />
+
+                        
+                    </TableRow>
+
+
+                    <TableRow
+                        android:id="@+id/tableRow6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+                    <Spinner
+                    	android:id="@+id/Condition6"
+                    	android:layout_width="fill_parent"
+                    	android:layout_height="wrap_content"
+                    	android:entries="@array/GunbitCondition" />
+                    <Spinner
+                    	android:id="@+id/Action6"
+                    	android:layout_width="fill_parent"
+                    	android:layout_height="wrap_content"
+                    	android:entries="@array/GunbitAction" />
+
+                        
+                    </TableRow>
+                    
+                    
+                    
+                    
                 </TableLayout>
 
                     

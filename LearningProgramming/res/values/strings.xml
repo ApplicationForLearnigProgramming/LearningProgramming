@@ -16,5 +16,9 @@
         <item >Condition1</item>
         <item >Condition2</item>
     </string-array>
+    <string-array name="GunbitAction">
+        <item >Action1</item>
+        <item >Action2</item>
+    </string-array>
 
 </resources>
