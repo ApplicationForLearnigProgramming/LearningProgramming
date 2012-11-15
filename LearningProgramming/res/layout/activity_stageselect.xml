@@ -1,17 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:layout_width="match_parent"
-    android:layout_height="match_parent" xmlns:android="http://schemas.android.com/apk/res/android"
-    android:background="@drawable/main">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main" >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true" >
 
-    <ImageButton
-        android:id="@+id/stage001"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="44dp"
-        android:layout_marginTop="144dp"
-        android:onClick="doAction"
-        android:src="@drawable/stage001" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <ImageButton
+                android:id="@+id/stage001"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="doAction"
+                android:src="@drawable/stage001" />
+
+            <ImageButton
+                android:id="@+id/stage002"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/stage002" />
+
+            <ImageButton
+                android:id="@+id/stage003"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/stage003" />
+
+            <ImageButton
+                android:id="@+id/stage004"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/stage004" />
+
+            <ImageButton
+                android:id="@+id/stage005"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/stage005" />
+
+            <ImageButton
+                android:id="@+id/stage006"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/stage006" />
+        </LinearLayout>
+
+    </ScrollView>
 
 </RelativeLayout>
