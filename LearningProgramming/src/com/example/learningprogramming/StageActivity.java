@@ -18,6 +18,8 @@ import android.view.SurfaceView;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.learningprogramming.view.StageActivityMoveSurfaceView;
@@ -36,6 +38,15 @@ public class StageActivity extends Activity {
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_stage3);
+		Spinner spinner;
+		spinner = (Spinner)findViewById(R.id.Action1);
+		System.out.println("spinnnnnnnnnnnnnner");
+		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item);
+		String[] spinnerItemArray = {"ガンビット１","ガンビット２","ガンビット３"};
+		for (String string : spinnerItemArray) {
+			adapter.add(string);
+		}
+		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
 		Map map = null;
 		try {
