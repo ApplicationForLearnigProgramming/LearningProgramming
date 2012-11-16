@@ -29,7 +29,8 @@
         android:layout_marginLeft="22dp"
         android:layout_toRightOf="@+id/button1"
         android:onClick="reset"
-        android:text="@string/button_reset" />
+        android:text="@string/button_reset" />
+
     <ScrollView
         android:id="@+id/scrollView1"
         android:layout_width="wrap_content"
@@ -42,27 +43,54 @@
         <TableLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent" >
+            
+                   <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+                   <ImageView
+						android:src="@android:drawable/divider_horizontal_dark"
+						android:contentDescription=""
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content"
+						android:scaleType="fitXY"
+						android:paddingLeft="5dp"
+						android:paddingRight="5dp"
+						android:paddingBottom="8dp"
+						android:paddingTop="8dp" />
+                        
+                   </TableRow>
+                   <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+                   <TextView android:text="ガンビット1"/>
+                        
+                   </TableRow>
 
                     <TableRow
                         android:id="@+id/tableRow1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" >
+                   
 
-                    <View
-                        android:id="@+id/horz_center1"
-                        android:layout_width="0dip"
-                        android:layout_height="0dip"
-                        />
+
+                    <TextView android:text="コンディション"/>
                     <Spinner
                     	android:id="@+id/Condition1"
-                    	android:layout_width="150dip"
+                    	android:layout_width="200dp"
                     	android:layout_height="wrap_content"
                     	android:entries="@array/GunbitCondition" />
+                    </TableRow>
+                    <TableRow
+                        android:id="@+id/tableRow2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+                    <TextView android:text="アクション"/>
                     <Spinner
                     	android:id="@+id/Action1"
-                    	android:layout_width="100dip"
+                    	android:layout_width="200dp"
                     	android:layout_height="wrap_content"
                     	android:entries="@array/GunbitAction" />
+
                     <CheckBox
                         android:id="@+id/Checkbox1"
                         android:layout_width="wrap_content"
@@ -71,28 +99,54 @@
 
 
                     </TableRow>
+                   <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+                   <ImageView
+						android:src="@android:drawable/divider_horizontal_dark"
+						android:contentDescription=""
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content"
+						android:scaleType="fitXY"
+						android:paddingLeft="5dp"
+						android:paddingRight="5dp"
+						android:paddingBottom="8dp"
+						android:paddingTop="8dp" />
+                        
+                   </TableRow>
+                   <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+                   <TextView android:text="ガンビット2"/>
+                        
+                   </TableRow>
+
 
 
                     <TableRow
-                        android:id="@+id/tableRow2"
+                        android:id="@+id/tableRow3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" >
 
-                    <View
-                        android:id="@+id/horz_center2"
-                        android:layout_width="0dip"
-                        android:layout_height="0dip"
-                        />
+                    <TextView android:text="コンディション"/>
+                    
                     <Spinner
                     	android:id="@+id/Condition2"
                     	android:layout_width="fill_parent"
                     	android:layout_height="wrap_content"
                     	android:entries="@array/GunbitCondition" />
+                    </TableRow>
+                    <TableRow
+                        android:id="@+id/tableRow4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+                    <TextView android:text="アクション"/>
                     <Spinner
                     	android:id="@+id/Action2"
                     	android:layout_width="fill_parent"
                     	android:layout_height="wrap_content"
                     	android:entries="@array/GunbitAction" />
+
                     <CheckBox
                         android:id="@+id/Checkbox2"
                         android:layout_width="wrap_content"
@@ -101,27 +155,53 @@
 
 
                     </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+                   <ImageView
+						android:src="@android:drawable/divider_horizontal_dark"
+						android:contentDescription=""
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content"
+						android:scaleType="fitXY"
+						android:paddingLeft="5dp"
+						android:paddingRight="5dp"
+						android:paddingBottom="8dp"
+						android:paddingTop="8dp" />
+                        
+                   </TableRow>
+                   <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+                   <TextView android:text="ガンビット3"/>
+                        
+                   </TableRow>
+                    
 
 
                     <TableRow
-                        android:id="@+id/tableRow3"
+                        android:id="@+id/tableRow5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" >
-                    <View
-                        android:id="@+id/horz_center3"
-                        android:layout_width="0dip"
-                        android:layout_height="0dip"
-                        />
+                    
+                    <TextView android:text="コンディション"/>
                     <Spinner
                     	android:id="@+id/Condition3"
                     	android:layout_width="fill_parent"
                     	android:layout_height="wrap_content"
                     	android:entries="@array/GunbitCondition" />
+                    </TableRow>
+                    <TableRow
+                        android:id="@+id/tableRow6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+                    <TextView android:text="アクション"/>
                     <Spinner
                     	android:id="@+id/Action3"
                     	android:layout_width="fill_parent"
                     	android:layout_height="wrap_content"
                     	android:entries="@array/GunbitAction" />
+                    
                     <CheckBox
                         android:id="@+id/Checkbox3"
                         android:layout_width="wrap_content"
@@ -130,29 +210,54 @@
 
 
                     </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+                   <ImageView
+						android:src="@android:drawable/divider_horizontal_dark"
+						android:contentDescription=""
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content"
+						android:scaleType="fitXY"
+						android:paddingLeft="5dp"
+						android:paddingRight="5dp"
+						android:paddingBottom="8dp"
+						android:paddingTop="8dp" />
+                        
+                   </TableRow>
+                   <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+                   <TextView android:text="ガンビット4"/>
+                        
+                   </TableRow>
+                    
 
 
 
                     <TableRow
-                        android:id="@+id/tableRow4"
+                        android:id="@+id/tableRow7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" >
-                    <View
-                        android:id="@+id/horz_center4"
-                        android:layout_width="0dip"
-                        android:layout_height="0dip"
-                        />
-
+                    <TextView android:text="コンディション"/>
                     <Spinner
                     	android:id="@+id/Condition4"
                     	android:layout_width="fill_parent"
                     	android:layout_height="wrap_content"
                     	android:entries="@array/GunbitCondition" />
+                    </TableRow>
+                    
+                    <TableRow
+                        android:id="@+id/tableRow8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+                    <TextView android:text="アクション"/>
                     <Spinner
                     	android:id="@+id/Action4"
                     	android:layout_width="fill_parent"
                     	android:layout_height="wrap_content"
                     	android:entries="@array/GunbitAction" />
+                    
                     <CheckBox
                         android:id="@+id/Checkbox4"
                         android:layout_width="wrap_content"
@@ -161,28 +266,54 @@
 
 
                     </TableRow>
+                   <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+                   <ImageView
+						android:src="@android:drawable/divider_horizontal_dark"
+						android:contentDescription=""
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content"
+						android:scaleType="fitXY"
+						android:paddingLeft="5dp"
+						android:paddingRight="5dp"
+						android:paddingBottom="8dp"
+						android:paddingTop="8dp" />
+                        
+                   </TableRow>
+                   <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+                   <TextView android:text="ガンビット5"/>
+                        
+                   </TableRow>
+                    
 
 
                     <TableRow
-                        android:id="@+id/tableRow5"
+                        android:id="@+id/tableRow9"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" >
-                    <View
-                        android:id="@+id/horz_center5"
-                        android:layout_width="0dip"
-                        android:layout_height="0dip"
-                        />
+                    
+                    <TextView android:text="コンディション"/>
 
                     <Spinner
                     	android:id="@+id/Condition5"
                     	android:layout_width="fill_parent"
                     	android:layout_height="wrap_content"
                     	android:entries="@array/GunbitCondition" />
+                    </TableRow>
+                    <TableRow
+                        android:id="@+id/tableRow10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+                    <TextView android:text="アクション"/>
                     <Spinner
                     	android:id="@+id/Action5"
                     	android:layout_width="fill_parent"
                     	android:layout_height="wrap_content"
                     	android:entries="@array/GunbitAction" />
+
                     <CheckBox
                         android:id="@+id/Checkbox5"
                         android:layout_width="wrap_content"
@@ -191,35 +322,60 @@
 
 
                     </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+                   <ImageView
+						android:src="@android:drawable/divider_horizontal_dark"
+						android:contentDescription=""
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content"
+						android:scaleType="fitXY"
+						android:paddingLeft="5dp"
+						android:paddingRight="5dp"
+						android:paddingBottom="8dp"
+						android:paddingTop="8dp" />
+                        
+                   </TableRow>
+                   <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+                   <TextView android:text="ガンビット6"/>
+                        
+                   </TableRow>
+                    
 
 
                     <TableRow
-                        android:id="@+id/tableRow6"
+                        android:id="@+id/tableRow11"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" >
-                    <View
-                        android:id="@+id/horz_center6"
-                        android:layout_width="0dip"
-                        android:layout_height="0dip"
-                        />
+                    <TextView android:text="コンディション"/>
 
                     <Spinner
                     	android:id="@+id/Condition6"
                     	android:layout_width="fill_parent"
                     	android:layout_height="wrap_content"
                     	android:entries="@array/GunbitCondition" />
+                    </TableRow>
+                    <TableRow
+                        android:id="@+id/tableRow12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+                    <TextView android:text="アクション"/>
                     <Spinner
                     	android:id="@+id/Action6"
                     	android:layout_width="fill_parent"
                     	android:layout_height="wrap_content"
                     	android:entries="@array/GunbitAction" />
+                    
                     <CheckBox
                         android:id="@+id/Checkbox6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/straitcheck"/>
 
-                         </TableRow>
+                    </TableRow>
         </TableLayout>
     </ScrollView>
 

@@ -30,7 +30,8 @@ public final class R {
         public static final int stage003=0x7f02000c;
         public static final int stage004=0x7f02000d;
         public static final int stage005=0x7f02000e;
-        public static final int title=0x7f02000f;
+        public static final int stage006=0x7f02000f;
+        public static final int title=0x7f020010;
     }
     public static final class id {
         public static final int Action1=0x7f080007;
@@ -45,12 +46,12 @@ public final class R {
         public static final int Checkbox4=0x7f080017;
         public static final int Checkbox5=0x7f08001c;
         public static final int Checkbox6=0x7f080021;
-        public static final int Condition1=0x7f080006;
-        public static final int Condition2=0x7f08000b;
-        public static final int Condition3=0x7f080010;
-        public static final int Condition4=0x7f080015;
-        public static final int Condition5=0x7f08001a;
-        public static final int Condition6=0x7f08001f;
+        public static final int Condition1=0x7f080005;
+        public static final int Condition2=0x7f08000a;
+        public static final int Condition3=0x7f08000f;
+        public static final int Condition4=0x7f080014;
+        public static final int Condition5=0x7f080019;
+        public static final int Condition6=0x7f08001e;
         public static final int FrameLayout01=0x7f08002f;
         public static final int ImageView01=0x7f080030;
         public static final int ImageView02=0x7f080031;
@@ -63,12 +64,6 @@ public final class R {
         public static final int button3=0x7f080024;
         public static final int firstlayout=0x7f080028;
         public static final int flipper=0x7f080027;
-        public static final int horz_center1=0x7f080005;
-        public static final int horz_center2=0x7f08000a;
-        public static final int horz_center3=0x7f08000f;
-        public static final int horz_center4=0x7f080014;
-        public static final int horz_center5=0x7f080019;
-        public static final int horz_center6=0x7f08001e;
         public static final int list=0x7f080035;
         public static final int menu_settings=0x7f080036;
         public static final int myview1=0x7f080026;
@@ -82,11 +77,17 @@ public final class R {
         public static final int stage004=0x7f08002d;
         public static final int stage005=0x7f08002e;
         public static final int tableRow1=0x7f080004;
-        public static final int tableRow2=0x7f080009;
-        public static final int tableRow3=0x7f08000e;
-        public static final int tableRow4=0x7f080013;
-        public static final int tableRow5=0x7f080018;
-        public static final int tableRow6=0x7f08001d;
+        public static final int tableRow10=0x7f08001a;
+        public static final int tableRow11=0x7f08001d;
+        public static final int tableRow12=0x7f08001f;
+        public static final int tableRow2=0x7f080006;
+        public static final int tableRow3=0x7f080009;
+        public static final int tableRow4=0x7f08000b;
+        public static final int tableRow5=0x7f08000e;
+        public static final int tableRow6=0x7f080010;
+        public static final int tableRow7=0x7f080013;
+        public static final int tableRow8=0x7f080015;
+        public static final int tableRow9=0x7f080018;
         public static final int textView1=0x7f080025;
     }
     public static final class layout {
