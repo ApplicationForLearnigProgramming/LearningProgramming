@@ -13,12 +13,24 @@
     <string name="button_reset">リセット</string>
     <string name="title_activity_stage_activity_writer">StageActivityWriter</string>
     <string-array name="GunbitCondition">
-        <item >Condition1</item>
-        <item >Condition2</item>
+        <item >なし</item><item >右に進めたら</item>
+        <item >左に進めたら</item>
+        <item >後ろに進めたら</item>
+        <item >前に進めたら</item>
+        <item >前と右に進めたら</item>
+        <item >前と左に進めたら</item>
+        <item >左右に進めたら</item>
+        <item >前と左右に進めたら</item>
+        <item >全方向に進めたら</item>
+        
     </string-array>
     <string-array name="GunbitAction">
-        <item >Action1</item>
-        <item >Action2</item>
+        <item >なし</item><item >前へ進む</item>
+        <item >後ろへ進む</item>
+        <item >右へ進む</item>
+        <item >左へ進む</item>
+        
     </string-array>
+    <string name="straitcheck">直進On</string>
 
 </resources>
