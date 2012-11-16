@@ -4,76 +4,72 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-        <SurfaceView
-          android:id="@+id/SurfaceViewMain"
-          android:layout_width="fill_parent"
-          android:layout_height="420px">
-        </SurfaceView>
+    <SurfaceView
+        android:id="@+id/SurfaceViewMain"
+        android:layout_width="fill_parent"
+        android:layout_height="410px"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" />
 
-        <Button
-            android:id="@+id/button1"
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/SurfaceViewMain"
+        android:layout_marginLeft="58dp"
+        android:onClick="move"
+        android:text="@string/button_start" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/SurfaceViewMain"
+        android:layout_marginLeft="22dp"
+        android:layout_toRightOf="@+id/button1"
+        android:onClick="reset"
+        android:text="@string/button_reset" />
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/button1" >
+
+        <TableLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:layout_marginBottom="136dp"
-            android:layout_marginLeft="47dp"
-            android:onClick="move"
-            android:text="@string/button_start" />
-
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/button1"
-            android:layout_alignBottom="@+id/button1"
-            android:layout_marginLeft="22dp"
-            android:layout_toRightOf="@+id/button1"
-            android:onClick="reset"
-            android:text="@string/button_reset" />
-
-
-        <ScrollView
-            android:id="@+id/scrollView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentRight="true"
-            android:layout_below="@+id/button2" >
-
-
-                 <TableLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent" >
+            android:layout_height="match_parent" >
 
                     <TableRow
                         android:id="@+id/tableRow1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" >
 
-                    <View 
+                    <View
                         android:id="@+id/horz_center1"
                         android:layout_width="0dip"
                         android:layout_height="0dip"
-                        />    
+                        />
                     <Spinner
                     	android:id="@+id/Condition1"
-                    	android:layout_width="wrap_content"
+                    	android:layout_width="150dip"
                     	android:layout_height="wrap_content"
                     	android:entries="@array/GunbitCondition" />
                     <Spinner
                     	android:id="@+id/Action1"
-                    	android:layout_width="wrap_content"
+                    	android:layout_width="100dip"
                     	android:layout_height="wrap_content"
                     	android:entries="@array/GunbitAction" />
-                    <CheckBox 
+                    <CheckBox
                         android:id="@+id/Checkbox1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/straitcheck"/>
 
-                        
+
                     </TableRow>
 
 
@@ -81,12 +77,12 @@
                         android:id="@+id/tableRow2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" >
-                    
-                    <View 
+
+                    <View
                         android:id="@+id/horz_center2"
                         android:layout_width="0dip"
                         android:layout_height="0dip"
-                        />   
+                        />
                     <Spinner
                     	android:id="@+id/Condition2"
                     	android:layout_width="fill_parent"
@@ -97,25 +93,25 @@
                     	android:layout_width="fill_parent"
                     	android:layout_height="wrap_content"
                     	android:entries="@array/GunbitAction" />
-                    <CheckBox 
+                    <CheckBox
                         android:id="@+id/Checkbox2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/straitcheck"/>
 
-                        
-                    </TableRow>                    
+
+                    </TableRow>
 
 
                     <TableRow
                         android:id="@+id/tableRow3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" >
-                    <View 
+                    <View
                         android:id="@+id/horz_center3"
                         android:layout_width="0dip"
                         android:layout_height="0dip"
-                        />   
+                        />
                     <Spinner
                     	android:id="@+id/Condition3"
                     	android:layout_width="fill_parent"
@@ -126,14 +122,14 @@
                     	android:layout_width="fill_parent"
                     	android:layout_height="wrap_content"
                     	android:entries="@array/GunbitAction" />
-                    <CheckBox 
+                    <CheckBox
                         android:id="@+id/Checkbox3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/straitcheck"/>
 
-                        
-                    </TableRow>               
+
+                    </TableRow>
 
 
 
@@ -141,12 +137,12 @@
                         android:id="@+id/tableRow4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" >
-                    <View 
+                    <View
                         android:id="@+id/horz_center4"
                         android:layout_width="0dip"
                         android:layout_height="0dip"
-                        />   
-                        
+                        />
+
                     <Spinner
                     	android:id="@+id/Condition4"
                     	android:layout_width="fill_parent"
@@ -157,13 +153,13 @@
                     	android:layout_width="fill_parent"
                     	android:layout_height="wrap_content"
                     	android:entries="@array/GunbitAction" />
-                    <CheckBox 
+                    <CheckBox
                         android:id="@+id/Checkbox4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/straitcheck"/>
 
-                        
+
                     </TableRow>
 
 
@@ -171,12 +167,12 @@
                         android:id="@+id/tableRow5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" >
-                    <View 
+                    <View
                         android:id="@+id/horz_center5"
                         android:layout_width="0dip"
                         android:layout_height="0dip"
-                        />   
-                        
+                        />
+
                     <Spinner
                     	android:id="@+id/Condition5"
                     	android:layout_width="fill_parent"
@@ -187,13 +183,13 @@
                     	android:layout_width="fill_parent"
                     	android:layout_height="wrap_content"
                     	android:entries="@array/GunbitAction" />
-                    <CheckBox 
+                    <CheckBox
                         android:id="@+id/Checkbox5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/straitcheck"/>
 
-                        
+
                     </TableRow>
 
 
@@ -201,12 +197,12 @@
                         android:id="@+id/tableRow6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" >
-                    <View 
+                    <View
                         android:id="@+id/horz_center6"
                         android:layout_width="0dip"
                         android:layout_height="0dip"
-                        />   
-                        
+                        />
+
                     <Spinner
                     	android:id="@+id/Condition6"
                     	android:layout_width="fill_parent"
@@ -217,24 +213,15 @@
                     	android:layout_width="fill_parent"
                     	android:layout_height="wrap_content"
                     	android:entries="@array/GunbitAction" />
-                    <CheckBox 
+                    <CheckBox
                         android:id="@+id/Checkbox6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/straitcheck"/>
 
-                        
-                    </TableRow>
-                    
-                    
-                    
-                    
-                </TableLayout>
+                         </TableRow>
+        </TableLayout>
+    </ScrollView>
 
-
-
-                    
-            
-            </ScrollView>
 
 </RelativeLayout>
