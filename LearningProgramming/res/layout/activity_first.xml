@@ -66,11 +66,13 @@
                         
                    </TableRow>
 
+
                     <TableRow
                         android:id="@+id/tableRow1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" >
                    
+
 
 
                     <TextView android:text="コンディション"/>
@@ -97,7 +99,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/straitcheck"/>
 
-
+                        
                     </TableRow>
                    <TableRow
                         android:layout_width="match_parent"
@@ -128,6 +130,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" >
 
+
                     <TextView android:text="コンディション"/>
                     
                     <Spinner
@@ -146,6 +149,7 @@
                     	android:layout_width="fill_parent"
                     	android:layout_height="wrap_content"
                     	android:entries="@array/GunbitAction" />
+
 
                     <CheckBox
                         android:id="@+id/Checkbox2"
@@ -176,7 +180,6 @@
                    <TextView android:text="ガンビット3"/>
                         
                    </TableRow>
-                    
 
 
                     <TableRow
@@ -185,6 +188,7 @@
                         android:layout_height="wrap_content" >
                     
                     <TextView android:text="コンディション"/>
+
                     <Spinner
                     	android:id="@+id/Condition3"
                     	android:layout_width="fill_parent"
@@ -208,7 +212,6 @@
                         android:layout_height="wrap_content"
                         android:text="@string/straitcheck"/>
 
-
                     </TableRow>
                     <TableRow
                         android:layout_width="match_parent"
@@ -231,15 +234,14 @@
                    <TextView android:text="ガンビット4"/>
                         
                    </TableRow>
-                    
-
-
 
                     <TableRow
                         android:id="@+id/tableRow7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" >
+
                     <TextView android:text="コンディション"/>
+
                     <Spinner
                     	android:id="@+id/Condition4"
                     	android:layout_width="fill_parent"
@@ -264,7 +266,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/straitcheck"/>
 
-
+                        
                     </TableRow>
                    <TableRow
                         android:layout_width="match_parent"
@@ -320,7 +322,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/straitcheck"/>
 
-
+                        
                     </TableRow>
                     <TableRow
                         android:layout_width="match_parent"
@@ -350,7 +352,9 @@
                         android:id="@+id/tableRow11"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" >
+
                     <TextView android:text="コンディション"/>
+
 
                     <Spinner
                     	android:id="@+id/Condition6"
@@ -368,6 +372,7 @@
                     	android:layout_width="fill_parent"
                     	android:layout_height="wrap_content"
                     	android:entries="@array/GunbitAction" />
+
                     
                     <CheckBox
                         android:id="@+id/Checkbox6"

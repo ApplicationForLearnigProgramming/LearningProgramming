@@ -2,7 +2,11 @@ package com.example.learningprogramming;
 
 import android.content.Context;
 import android.content.res.Resources;
-import android.graphics.*;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.view.View;
 
@@ -28,7 +32,7 @@ public class StartView extends View {
 		init(context);
 	}
 
-	private void init(Context context){
+	private void init(Context context) {
 		Resources res = context.getResources();
 		bitmap = BitmapFactory.decodeResource(res, R.drawable.title);
 	}
@@ -38,12 +42,10 @@ public class StartView extends View {
 		// TODO 自動生成されたメソッド・スタブ
 		super.onDraw(canvas);
 		canvas.drawColor(Color.WHITE);
-		if(bitmap != null){
+		if (bitmap != null) {
 			Paint paint = new Paint();
 			canvas.drawBitmap(bitmap, 50, 100, paint);
 		}
 	}
-
-
 
 }

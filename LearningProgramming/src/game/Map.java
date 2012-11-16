@@ -16,10 +16,12 @@ public class Map {
 	private Point2 _startCharaPoint = null;
 	private Direction4 _startCharaDirection = null;
 
+	private static Map _selected = null;
+
 	private ArrayList<Tile> _tiles = new ArrayList<Tile>();
 	private Character _chara;
-	private Tile warp_A;
-	private Tile warp_B;
+	private Tile warp_A = null;
+	private Tile warp_B = null;
 	private boolean _warpFlag = true;
 	private int _width = 0;
 	private int _height = 0;
@@ -179,6 +181,14 @@ public class Map {
 
 	public void reset() {
 		_chara = new Character(_startCharaPoint, _startCharaDirection);
+	}
+
+	public static void setSelectedMap(Map map) {
+		_selected = map;
+	}
+
+	public static Map getSelectedMap() {
+		return _selected;
 	}
 
 	public int getWidth() {
