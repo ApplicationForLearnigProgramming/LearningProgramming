@@ -19,6 +19,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.Spinner;
 
@@ -33,7 +34,8 @@ public class StageActivity extends Activity {
 	private StageActivityMoveSurfaceView stageMoveSurface;
 	private GameManeger _maneger;
 	private ArrayList<Gambit> _gambits = new ArrayList<Gambit>();
-
+	private Button startButton;
+	private Button resetButton;
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -41,6 +43,9 @@ public class StageActivity extends Activity {
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 
 		setContentView(R.layout.activity_stage3);
+		startButton = (Button)findViewById(R.id.button1);
+		resetButton = (Button)findViewById(R.id.button2);
+		resetButton.setEnabled(false);
 		Spinner spinner;
 		spinner = (Spinner) findViewById(R.id.Action1);
 		System.out.println("spinnnnnnnnnnnnnner");
@@ -102,6 +107,8 @@ public class StageActivity extends Activity {
 		 * _gambits.add(new Gambit(false,
 		 * GambitCondition.CanBack,GambitMotion.Back));
 		 */
+		startButton.setEnabled(false);
+		resetButton.setEnabled(true);
 		Spinner[] conditoins = {(Spinner) findViewById(R.id.Condition1),
 				(Spinner) findViewById(R.id.Condition2),
 				(Spinner) findViewById(R.id.Condition3),
@@ -178,6 +185,8 @@ public class StageActivity extends Activity {
 	}
 
 	public void reset(View view) {
+		startButton.setEnabled(true);
+		resetButton.setEnabled(false);
 		stageMoveSurface.reset();
 	}
 
