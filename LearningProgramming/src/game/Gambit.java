@@ -5,7 +5,7 @@ public class Gambit {
 	private GambitCondition _condition;
 	private GambitMotion _motion;
 
-	Gambit(boolean staright, GambitCondition condition, GambitMotion motion){
+	public Gambit(boolean staright, GambitCondition condition, GambitMotion motion){
 		_straight = staright;
 		_condition = condition;
 		_motion = motion;
@@ -136,5 +136,16 @@ public class Gambit {
 		}
 	}
 
+	public GambitCondition getGambitCondition(){
+		return _condition;
+	}
+
+	public GambitMotion getGambitMotion(){
+		return _motion;
+	}
+
+	public String toString(){
+		return "STRAIGHT: " + _straight + " CONDITION: " + _condition + " MOTION: " + _motion;
+	}
 
 }

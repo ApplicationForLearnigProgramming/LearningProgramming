@@ -1,6 +1,7 @@
 package com.example.learningprogramming.view;
 
 import game.Direction4;
+import game.Gambit;
 import game.GambitCondition;
 import game.GambitMotion;
 import game.GameManeger;
@@ -8,6 +9,7 @@ import game.Map;
 import game.Point2;
 import game.TileType;
 
+import java.util.ArrayList;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -73,9 +75,9 @@ public class StageActivityMoveSurfaceView extends SurfaceView
 	}
 
 	public StageActivityMoveSurfaceView(Context context, SurfaceView attrs,
-			Map map) {
+			GameManeger maneger) {
 		super(context);
-		initSurface(context, attrs, map);
+		initSurface(context, attrs, maneger);
 		// TODO 自動生成されたコンストラクター・スタブ
 	}
 
@@ -96,7 +98,7 @@ public class StageActivityMoveSurfaceView extends SurfaceView
 
 	}
 
-	public void initSurface(Context context, SurfaceView sv, Map map) {
+	public void initSurface(Context context, SurfaceView sv, GameManeger maneger) {
 		holder = sv.getHolder();
 		holder.addCallback(this);
 		Resources res = context.getResources();
@@ -116,13 +118,7 @@ public class StageActivityMoveSurfaceView extends SurfaceView
 
 		bitmap = bitmap.createBitmap(bitmap, 0, 0, width, height, matrix, true);
 
-		_maneger = new GameManeger();
-		_maneger.setMap(map);
-		_maneger.addGambit(false, GambitCondition.CanRightAndLeft, GambitMotion.Left);
-		_maneger.addGambit(true, GambitCondition.CanLeft, GambitMotion.Left);
-		_maneger.addGambit(false, GambitCondition.CanForward,GambitMotion.Forward);
-		_maneger.addGambit(false, GambitCondition.CanBack,GambitMotion.Back);
-
+		_maneger = maneger;
 
 		_lastX = _maneger.getMap().getCharacter().getLocation().x * LENGTH
 				+ TOP;
@@ -224,7 +220,11 @@ public class StageActivityMoveSurfaceView extends SurfaceView
 
 	}
 
-	public void move() {
+	public void move(ArrayList<Gambit> gambits) {
+		for(int i = 0 ; i < gambits.size(); i++){
+			_maneger.addGambit(gambits.get(i).goStraight(), gambits.get(i).getGambitCondition(), gambits.get(i).getGambitMotion());
+			Log.v("GAMBIT ", ":" + gambits.get(0));
+		}
 		_flag = true;
 	}
 
@@ -232,11 +232,6 @@ public class StageActivityMoveSurfaceView extends SurfaceView
 		Log.d("FLAG", "OK");
 		_flag = false;
 		_maneger.reset();
-		_maneger.addGambit(false, GambitCondition.CanRight, GambitMotion.Right);
-		_maneger.addGambit(true, GambitCondition.CanRightAndLeft, GambitMotion.Left);
-		_maneger.addGambit(false, GambitCondition.CanLeft, GambitMotion.Left);
-		_maneger.addGambit(false, GambitCondition.CanForward,GambitMotion.Forward);
-		_maneger.addGambit(false, GambitCondition.CanBack,GambitMotion.Back);
 		_lastX = _maneger.getMap().getCharacter().getLocation().x * LENGTH
 				+ TOP;
 		_lastY = _maneger.getMap().getCharacter().getLocation().y * LENGTH

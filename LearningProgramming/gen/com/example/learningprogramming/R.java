@@ -30,8 +30,7 @@ public final class R {
         public static final int stage003=0x7f02000c;
         public static final int stage004=0x7f02000d;
         public static final int stage005=0x7f02000e;
-        public static final int stage006=0x7f02000f;
-        public static final int title=0x7f020010;
+        public static final int title=0x7f02000f;
     }
     public static final class id {
         public static final int Action1=0x7f080006;
@@ -46,20 +45,20 @@ public final class R {
         public static final int Condition4=0x7f08000e;
         public static final int Condition5=0x7f080011;
         public static final int Condition6=0x7f080014;
-        public static final int FrameLayout01=0x7f080024;
-        public static final int ImageView01=0x7f080025;
-        public static final int ImageView02=0x7f080026;
-        public static final int ImageView03=0x7f080027;
-        public static final int ImageView04=0x7f080028;
-        public static final int ImageView05=0x7f080029;
+        public static final int FrameLayout01=0x7f080023;
+        public static final int ImageView01=0x7f080024;
+        public static final int ImageView02=0x7f080025;
+        public static final int ImageView03=0x7f080026;
+        public static final int ImageView04=0x7f080027;
+        public static final int ImageView05=0x7f080028;
         public static final int SurfaceViewMain=0x7f080000;
         public static final int button1=0x7f080001;
         public static final int button2=0x7f080002;
         public static final int button3=0x7f080018;
         public static final int firstlayout=0x7f08001c;
         public static final int flipper=0x7f08001b;
-        public static final int list=0x7f08002a;
-        public static final int menu_settings=0x7f08002b;
+        public static final int list=0x7f080029;
+        public static final int menu_settings=0x7f08002a;
         public static final int myview1=0x7f08001a;
         public static final int myview2=0x7f080016;
         public static final int myview3=0x7f080017;
@@ -70,7 +69,6 @@ public final class R {
         public static final int stage003=0x7f080020;
         public static final int stage004=0x7f080021;
         public static final int stage005=0x7f080022;
-        public static final int stage006=0x7f080023;
         public static final int tableRow1=0x7f080004;
         public static final int tableRow2=0x7f080007;
         public static final int tableRow3=0x7f08000a;

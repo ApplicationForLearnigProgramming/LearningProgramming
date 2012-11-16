@@ -1,0 +1,110 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  Internal Error (classFileParser.cpp:3494), pid=4912, tid=6072
+#  Error: ShouldNotReachHere()
+#
+# JRE version: 6.0_31-b05
+# Java VM: Java HotSpot(TM) Client VM (20.6-b01 mixed mode windows-x86 )
+# If you would like to submit a bug report, please visit:
+#   http://java.sun.com/webapps/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x001d9c00):  JavaThread "Unknown thread" [_thread_in_vm, id=6072, stack(0x00290000,0x002e0000)]
+
+Stack: [0x00290000,0x002e0000],  sp=0x002df86c,  free space=318k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x1335ca]
+V  [jvm.dll+0x12e57b]
+V  [jvm.dll+0x1639e]
+V  [jvm.dll+0x17bdf]
+V  [jvm.dll+0x26cc5]
+V  [jvm.dll+0x27506]
+V  [jvm.dll+0x278b5]
+V  [jvm.dll+0x27949]
+V  [jvm.dll+0x27a0c]
+V  [jvm.dll+0x27a8a]
+V  [jvm.dll+0x27b6d]
+V  [jvm.dll+0x27e39]
+V  [jvm.dll+0x6c383]
+V  [jvm.dll+0x6c75c]
+V  [jvm.dll+0xf9b4c]
+V  [jvm.dll+0x11848b]
+V  [jvm.dll+0x9eb60]
+C  [javaw.exe+0x1657]
+C  [javaw.exe+0x1e2c]
+C  [javaw.exe+0x8614]
+C  [kernel32.dll+0x13677]  BaseThreadInitThunk+0x12
+C  [ntdll.dll+0x39f42]  RtlInitializeExceptionChain+0x63
+C  [ntdll.dll+0x39f15]  RtlInitializeExceptionChain+0x36
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x001d9c00 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=6072, stack(0x00290000,0x002e0000)]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Dynamic libraries:
+0x00400000 - 0x00425000 	C:\pleiades\java\6\bin\javaw.exe
+0x77930000 - 0x77ab0000 	C:\Windows\SysWOW64\ntdll.dll
+0x76b30000 - 0x76c40000 	C:\Windows\syswow64\kernel32.dll
+0x77000000 - 0x77047000 	C:\Windows\syswow64\KERNELBASE.dll
+0x768a0000 - 0x76940000 	C:\Windows\syswow64\ADVAPI32.dll
+0x76a80000 - 0x76b2c000 	C:\Windows\syswow64\msvcrt.dll
+0x77150000 - 0x77169000 	C:\Windows\SysWOW64\sechost.dll
+0x76140000 - 0x76230000 	C:\Windows\syswow64\RPCRT4.dll
+0x75490000 - 0x754f0000 	C:\Windows\syswow64\SspiCli.dll
+0x75480000 - 0x7548c000 	C:\Windows\syswow64\CRYPTBASE.dll
+0x76c60000 - 0x76d60000 	C:\Windows\syswow64\USER32.dll
+0x76780000 - 0x76810000 	C:\Windows\syswow64\GDI32.dll
+0x77140000 - 0x7714a000 	C:\Windows\syswow64\LPK.dll
+0x77170000 - 0x7720d000 	C:\Windows\syswow64\USP10.dll
+0x773b0000 - 0x77410000 	C:\Windows\system32\IMM32.DLL
+0x76dc0000 - 0x76e8c000 	C:\Windows\syswow64\MSCTF.dll
+0x7c340000 - 0x7c396000 	C:\pleiades\java\6\bin\msvcr71.dll
+0x6d8c0000 - 0x6db6f000 	C:\pleiades\java\6\bin\client\jvm.dll
+0x744b0000 - 0x744e2000 	C:\Windows\system32\WINMM.dll
+0x744f0000 - 0x7453b000 	C:\Windows\system32\apphelp.dll
+0x6d870000 - 0x6d87c000 	C:\pleiades\java\6\bin\verify.dll
+0x6d3d0000 - 0x6d3ef000 	C:\pleiades\java\6\bin\java.dll
+0x6d8b0000 - 0x6d8bf000 	C:\pleiades\java\6\bin\zip.dll
+0x77900000 - 0x77905000 	C:\Windows\system32\PSAPI.DLL
+
+VM Arguments:
+jvm_args: -Dfile.encoding=UTF-8 -Xbootclasspath:C:\Users\Obsidian\AppData\Local\Android\android-sdk\platforms\android-14\android.jar 
+java_command: game.Test
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk1.7.0_03
+CLASSPATH=.;C:\Program Files\Java
+PATH=C:/pleiades/eclipse/jre/bin/client;C:/pleiades/eclipse/jre/bin;C:/pleiades/eclipse/jre/lib/i386;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Toshiba\Bluetooth Toshiba Stack\sys\;C:\Program Files (x86)\Toshiba\Bluetooth Toshiba Stack\sys\x64\;C:\Program Files (x86)\Common Files\Roxio Shared\DLLShared\;C:\Program Files (x86)\Common Files\Roxio Shared\10.0\DLLShared\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\VXIPNP\WinNT\Bin;C:\Program Files (x86)\Git\cmd;C:\Program Files\TortoiseGit\bin;c:\cygwin\gnuarm\bin;;C:\Program Files\Java\jdk1.7.0_03\bin;C:\Program Files (x86)\Android\android-sdk\tools;C:\Program Files (x86)\Android\android-sdk\platform-tools;C:\MinGW\msys\1.0\bin;C:\pleiades\eclipse;
+USERNAME=Obsidian
+SHELL=/bin/bash
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 37 Stepping 5, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 , 64 bit Build 7600 
+
+CPU:total 4 (2 cores per cpu, 2 threads per core) family 6 model 37 stepping 5, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, ht
+
+Memory: 4k page, physical 8182320k(5164208k free), swap 16362740k(12752440k free)
+
+vm_info: Java HotSpot(TM) Client VM (20.6-b01) for windows-x86 JRE (1.6.0_31-b05), built on Feb  3 2012 18:44:09 by "java_re" with MS VC++ 7.1 (VS2003)
+
+time: Fri Nov 16 15:53:18 2012
+elapsed time: 0 seconds
+

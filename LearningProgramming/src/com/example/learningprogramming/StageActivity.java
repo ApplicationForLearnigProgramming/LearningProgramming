@@ -1,5 +1,11 @@
 package com.example.learningprogramming;
 
+import java.util.ArrayList;
+
+import game.Gambit;
+import game.GambitCondition;
+import game.GambitMotion;
+import game.GameManeger;
 import game.Map;
 import game.StageCreator;
 import android.app.Activity;
@@ -24,6 +30,8 @@ public class StageActivity extends Activity {
 	private SurfaceView surfaceview;
 	private StageActivitySurfaceView stageSurface;
 	private StageActivityMoveSurfaceView stageMoveSurface;
+	private GameManeger _maneger;
+	private ArrayList<Gambit> _gambits = new ArrayList<Gambit>();
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -46,11 +54,15 @@ public class StageActivity extends Activity {
 
 		Map map = new StageCreator().createStage002();
 
+		_maneger = new GameManeger();
+		_maneger.setMap(map);
+
 		// SurfaceViewを参照
 		surfaceview = (SurfaceView) findViewById(R.id.SurfaceViewMain);
+
 		// 作成したMainSurfaceViewクラスをインスタンス化
 		stageMoveSurface = new StageActivityMoveSurfaceView(this, surfaceview,
-				map);
+				_maneger);
 
 		// stageSurface = new StageActivitySurfaceView(this, surfaceview);
 		myGestureDetector = new GestureDetector(new MyGestureListener());
@@ -81,7 +93,12 @@ public class StageActivity extends Activity {
 	// }
 
 	public void move(View view) {
-		stageMoveSurface.move();
+		_gambits.add(new Gambit(false, GambitCondition.CanRightAndLeft, GambitMotion.Left));
+		_gambits.add(new Gambit(true, GambitCondition.CanLeft, GambitMotion.Left));
+		_gambits.add(new Gambit(false, GambitCondition.CanForward,GambitMotion.Forward));
+		_gambits.add(new Gambit(false, GambitCondition.CanBack,GambitMotion.Back));
+
+		stageMoveSurface.move(_gambits);
 	}
 
 	public void reset(View view) {

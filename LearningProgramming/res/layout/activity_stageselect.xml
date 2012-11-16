@@ -46,11 +46,6 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/stage005" />
 
-            <ImageButton
-                android:id="@+id/stage006"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/stage006" />
         </LinearLayout>
 
     </ScrollView>
