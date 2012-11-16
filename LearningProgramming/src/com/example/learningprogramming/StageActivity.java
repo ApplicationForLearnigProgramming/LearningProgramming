@@ -1,13 +1,13 @@
 package com.example.learningprogramming;
 
-import java.util.ArrayList;
-
 import game.Gambit;
 import game.GambitCondition;
 import game.GambitMotion;
 import game.GameManeger;
 import game.Map;
-import game.StageCreator;
+
+import java.util.ArrayList;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -53,10 +53,10 @@ public class StageActivity extends Activity {
 		}
 		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
-		Map map = new StageCreator().createStage002();
+		// Map map = new StageCreator().createStage002();
 
 		_maneger = new GameManeger();
-		_maneger.setMap(map);
+		_maneger.setMap(Map.getSelectedMap());
 
 		// SurfaceViewを参照
 		surfaceview = (SurfaceView) findViewById(R.id.SurfaceViewMain);
@@ -94,76 +94,84 @@ public class StageActivity extends Activity {
 	// }
 
 	public void move(View view) {
-		/*_gambits.add(new Gambit(false, GambitCondition.CanRightAndLeft, GambitMotion.Left));
-		_gambits.add(new Gambit(true, GambitCondition.CanLeft, GambitMotion.Left));
-		_gambits.add(new Gambit(false, GambitCondition.CanForward,GambitMotion.Forward));
-		_gambits.add(new Gambit(false, GambitCondition.CanBack,GambitMotion.Back));*/
-		Spinner[] conditoins = {
-				(Spinner) findViewById(R.id.Condition1),
+		/*
+		 * _gambits.add(new Gambit(false, GambitCondition.CanRightAndLeft,
+		 * GambitMotion.Left)); _gambits.add(new Gambit(true,
+		 * GambitCondition.CanLeft, GambitMotion.Left)); _gambits.add(new
+		 * Gambit(false, GambitCondition.CanForward,GambitMotion.Forward));
+		 * _gambits.add(new Gambit(false,
+		 * GambitCondition.CanBack,GambitMotion.Back));
+		 */
+		Spinner[] conditoins = {(Spinner) findViewById(R.id.Condition1),
 				(Spinner) findViewById(R.id.Condition2),
 				(Spinner) findViewById(R.id.Condition3),
 				(Spinner) findViewById(R.id.Condition4),
 				(Spinner) findViewById(R.id.Condition5),
 				(Spinner) findViewById(R.id.Condition6)};
-		Spinner[] actions = {
-				(Spinner) findViewById(R.id.Action1),
+		Spinner[] actions = {(Spinner) findViewById(R.id.Action1),
 				(Spinner) findViewById(R.id.Action2),
 				(Spinner) findViewById(R.id.Action3),
 				(Spinner) findViewById(R.id.Action4),
 				(Spinner) findViewById(R.id.Action5),
 				(Spinner) findViewById(R.id.Action6)};
-		CheckBox[] checkboxes ={
-				(CheckBox)findViewById(R.id.Checkbox1),
-				(CheckBox)findViewById(R.id.Checkbox2),
-				(CheckBox)findViewById(R.id.Checkbox3),
-				(CheckBox)findViewById(R.id.Checkbox4),
-				(CheckBox)findViewById(R.id.Checkbox5),
-				(CheckBox)findViewById(R.id.Checkbox6)};
-		for(int i = 0; i < conditoins.length; i++){
-			if(!conditoins[i].getSelectedItem().toString().equals("なし") || !actions[i].getSelectedItem().toString().equals("なし")){
-				if(checkboxes[i].isChecked()){
-					_gambits.add(new Gambit(true, selectCondition(conditoins[i].getSelectedItem().toString()), selectAction(actions[i].getSelectedItem().toString())));
-				}else{
-					_gambits.add(new Gambit(false, selectCondition(conditoins[i].getSelectedItem().toString()), selectAction(actions[i].getSelectedItem().toString())));
+		CheckBox[] checkboxes = {(CheckBox) findViewById(R.id.Checkbox1),
+				(CheckBox) findViewById(R.id.Checkbox2),
+				(CheckBox) findViewById(R.id.Checkbox3),
+				(CheckBox) findViewById(R.id.Checkbox4),
+				(CheckBox) findViewById(R.id.Checkbox5),
+				(CheckBox) findViewById(R.id.Checkbox6)};
+		for (int i = 0; i < conditoins.length; i++) {
+			if (!conditoins[i].getSelectedItem().toString().equals("なし")
+					|| !actions[i].getSelectedItem().toString().equals("なし")) {
+				if (checkboxes[i].isChecked()) {
+					_gambits.add(new Gambit(true, selectCondition(conditoins[i]
+							.getSelectedItem().toString()),
+							selectAction(actions[i].getSelectedItem()
+									.toString())));
+				} else {
+					_gambits.add(new Gambit(false,
+							selectCondition(conditoins[i].getSelectedItem()
+									.toString()), selectAction(actions[i]
+									.getSelectedItem().toString())));
 				}
 			}
-			
+
 		}
 
 		stageMoveSurface.move(_gambits);
 	}
-	
+
 	private GambitMotion selectAction(String action) {
-		if(action.equals("前へ進む")){
+		if (action.equals("前へ進む")) {
 			return GambitMotion.Forward;
-		}else if(action.equals("後ろへ進む")){
+		} else if (action.equals("後ろへ進む")) {
 			return GambitMotion.Back;
-		}else if(action.equals("右へ進む")){
+		} else if (action.equals("右へ進む")) {
 			return GambitMotion.Right;
-		}else if(action.equals("左へ進む")){
+		} else if (action.equals("左へ進む")) {
 			return GambitMotion.Left;
 		}
 		return null;
 	}
 
-	public GambitCondition selectCondition(String condition){
-		if(condition.equals("右に進めたら")){
+	public GambitCondition selectCondition(String condition) {
+		if (condition.equals("右に進めたら")) {
 			return GambitCondition.CanRight;
-		}else if(condition.equals("左に進めたら")){
+		} else if (condition.equals("左に進めたら")) {
 			return GambitCondition.CanLeft;
-		}else if(condition.equals("後ろに進めたら")){
+		} else if (condition.equals("後ろに進めたら")) {
 			return GambitCondition.CanBack;
-		}else if(condition.equals("前に進めたら")){
+		} else if (condition.equals("前に進めたら")) {
 			return GambitCondition.CanForward;
-		}else if(condition.equals("前と右に進めたら")){
+		} else if (condition.equals("前と右に進めたら")) {
 			return GambitCondition.CanForwardAndRight;
-		}else if(condition.equals("前と左に進めたら")){
+		} else if (condition.equals("前と左に進めたら")) {
 			return GambitCondition.CanForwardAndLeft;
-		}else if(condition.equals("左右に進めたら")){
+		} else if (condition.equals("左右に進めたら")) {
 			return GambitCondition.CanRightAndLeft;
-		}else if(condition.equals("前と左右に進めたら")){
+		} else if (condition.equals("前と左右に進めたら")) {
 			return GambitCondition.CanRightAndLeftAndForward;
-		}else if(condition.equals("全方向に進めたら")){
+		} else if (condition.equals("全方向に進めたら")) {
 			return GambitCondition.CanALL;
 		}
 		return null;

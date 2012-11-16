@@ -14,12 +14,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical" >
-
+
             <ImageButton
                 android:id="@+id/stage001"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="doAction"
                 android:src="@drawable/stage001" />
 
             <ImageButton
@@ -45,6 +44,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/stage005" />
+
+            <ImageButton
+                android:id="@+id/stage006"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/stage006" />
 
         </LinearLayout>
 
