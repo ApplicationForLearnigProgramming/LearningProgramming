@@ -175,6 +175,7 @@ public class StageActivity extends Activity {
 	public void reset(View view) {
 		startButton.setEnabled(true);
 		resetButton.setEnabled(false);
+		_gambits.clear();
 		stageMoveSurface.reset();
 	}
 
