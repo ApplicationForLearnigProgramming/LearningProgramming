@@ -23,6 +23,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.Spinner;
 
+import com.example.learningprogramming.sound.SoundView;
 import com.example.learningprogramming.view.StageActivityMoveSurfaceView;
 import com.example.learningprogramming.view.StageActivitySurfaceView;
 
@@ -36,16 +37,22 @@ public class StageActivity extends Activity {
 	private ArrayList<Gambit> _gambits = new ArrayList<Gambit>();
 	private Button startButton;
 	private Button resetButton;
+	private SoundView bgm = null;
+
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
-
 		setContentView(R.layout.activity_stage3);
-		startButton = (Button)findViewById(R.id.button1);
-		resetButton = (Button)findViewById(R.id.button2);
+
+		bgm = new SoundView(this);
+		bgm.startBGM_stage();
+
+		startButton = (Button) findViewById(R.id.button1);
+		resetButton = (Button) findViewById(R.id.button2);
 		resetButton.setEnabled(false);
+
 		Spinner spinner;
 		spinner = (Spinner) findViewById(R.id.Action1);
 		System.out.println("spinnnnnnnnnnnnnner");
@@ -57,8 +64,6 @@ public class StageActivity extends Activity {
 			adapter.add(string);
 		}
 		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
-		// Map map = new StageCreator().createStage002();
 
 		_maneger = new GameManeger();
 		_maneger.setMap(Map.getSelectedMap());
@@ -77,26 +82,9 @@ public class StageActivity extends Activity {
 	@Override
 	public void onDestroy() {
 		super.onDestroy();
+		bgm.stopSound(bgm.getBGM());
 		Thread.interrupted();
 	}
-
-	// private BufferedReader loadStageFile(String filename) throws IOException
-	// {
-	// InputStream is = null;
-	// BufferedReader br = null;
-	//
-	// try {
-	// is = this.openFileInput(filename);
-	// if (is != null) {
-	// br = new BufferedReader(new InputStreamReader(is));
-	// }
-	// } catch (FileNotFoundException e) {
-	// Toast.makeText(this, "ファイルが存在しません", Toast.LENGTH_SHORT).show();
-	// } catch (NullPointerException e) {
-	// Toast.makeText(this, "ぬるぽ", Toast.LENGTH_SHORT).show();
-	// }
-	// return br;
-	// }
 
 	public void move(View view) {
 		/*
