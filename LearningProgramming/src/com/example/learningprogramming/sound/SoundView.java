@@ -31,6 +31,7 @@ public class SoundView extends View {
 			nowPlaying.stop();
 		}
 		nowPlaying = bgm_menu;
+		nowPlaying.setLooping(true);
 		nowPlaying.start();
 	}
 
@@ -39,6 +40,7 @@ public class SoundView extends View {
 			nowPlaying.stop();
 		}
 		nowPlaying = bgm_select;
+		nowPlaying.setLooping(true);
 		nowPlaying.start();
 	}
 
@@ -47,6 +49,7 @@ public class SoundView extends View {
 			nowPlaying.stop();
 		}
 		nowPlaying = bgm_stage;
+		nowPlaying.setLooping(true);
 		nowPlaying.start();
 	}
 

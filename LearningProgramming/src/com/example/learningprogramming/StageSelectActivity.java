@@ -140,6 +140,7 @@ public class StageSelectActivity extends Activity {
 			doAction(v);
 		}
 	};
+
 	public void doAction(View view) {
 		final Activity activity = this;
 		Intent intent = new Intent(activity,
