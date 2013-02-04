@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <color name="clearwhite">#44FFFFFF</color>
+    <color name="clearblack">#44000000</color>
+    <color name="clearred">#44FF0000</color>
+    <color name="cleargreen">#4400FF00</color>
+    <color name="clearblue">#440000FF</color>
+    <color name="clearcyan">#4400FFFF</color>
+</resources>
